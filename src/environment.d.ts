@@ -5,5 +5,7 @@ declare namespace NodeJS {
     readonly DB_USER: string;
     readonly DB_PASSWORD: string;
     readonly DB_NAME: string;
+    readonly PGADMIN_DEFAULT_EMAIL: string;
+    readonly PGADMIN_DEFAULT_PASSWORD: string;
   }
 }
