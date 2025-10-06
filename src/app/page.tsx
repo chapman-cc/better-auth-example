@@ -1,4 +1,8 @@
-import { SigninButton, SingoutButton } from "./Buttons";
+import {
+  SigninGithub,
+  SigninMicrosoft,
+  SingoutButton,
+} from "./Buttons";
 import { auth } from "../auth";
 import { headers } from "next/headers";
 
@@ -8,7 +12,10 @@ export default async function Home() {
   if (authenticated === null) {
     return (
       <main>
-        <SigninButton />
+        <SigninGithub />
+        <br />
+        <SigninMicrosoft />
+        <br />
       </main>
     );
   }
