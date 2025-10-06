@@ -1,5 +1,6 @@
 "use client";
 import { signIn, signOut } from "@/auth-client";
+import { useRouter } from "next/navigation";
 
 export function SigninGithub() {
   return (
@@ -19,5 +20,10 @@ export function SigninMicrosoft() {
 }
 
 export function SingoutButton() {
-  return <button onClick={() => signOut()}>Signout</button>;
+  const router = useRouter();
+  const handleSignout = async () => {
+    await signOut();
+    router.push("/");
+  };
+  return <button onClick={handleSignout}>Signout</button>;
 }
