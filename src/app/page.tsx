@@ -2,6 +2,7 @@ import {
   SigninGithub,
   SigninMicrosoft,
   SingoutButton,
+  SSOSigninButton,
 } from "./Buttons";
 import { auth } from "../auth";
 import { headers } from "next/headers";
@@ -16,6 +17,7 @@ export default async function Home() {
         <br />
         <SigninMicrosoft />
         <br />
+        <SSOSigninButton />
       </main>
     );
   }

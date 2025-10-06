@@ -27,3 +27,9 @@ export function SingoutButton() {
   };
   return <button onClick={handleSignout}>Signout</button>;
 }
+
+export function SSOSigninButton() {
+  const handleSSOSignin = () =>
+    signIn.sso({ email: "chapche@dfds.com", callbackURL: "/" });
+  return <button onClick={handleSSOSignin}>SSO Signin</button>;
+}
